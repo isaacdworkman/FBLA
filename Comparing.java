@@ -2,7 +2,6 @@ import java.util.ArrayList;
 public class Comparing
 {
   
-  private String selectedLocation="Other";
   
   public boolean Cities(String location)
   {
@@ -13,7 +12,7 @@ public class Comparing
     }
     return false;
   }
-  public boolean RemoveByCity(String location)
+  public boolean RemoveByCity(String location, String entry))
   {
     if(selectedLocation.equals("Other"))
     {
