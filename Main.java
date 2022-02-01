@@ -1,6 +1,6 @@
 /*
 FBLA project - tourist, 
-By: Matt Uehling, Ben Kubick, Isaac Workmen
+By: Matt Uehling, Ben Kubicek, Isaac Workmen
 */
 import java.util.Scanner;//To scan
 class Main {
@@ -11,13 +11,13 @@ class Main {
     Comparing Compare = new Comparing(); //connecting more files
     Scanner scan = new Scanner(System.in);//Creates the scanner
     String location="";//Creates the variable location
-    System.out.println("What city do you want to search for: Omaha, Lincoln, Fremont or other");
+    System.out.println("What city do you want to search for: Omaha, Lincoln, Fremont, or other");
     location = scan.nextLine();
     if(Compare.Cities(location)==false)
     {
     do{
     System.out.println("Sorry your selection was not recongnized please try again");
-    System.out.println("What city do you want to search for: Omaha, Lincoln, Fremont or other");
+    System.out.println("What city do you want to search for: Omaha, Lincoln, Fremont, or other");
     location = scan.nextLine();
     }while(Compare.Cities(location)==false);//Repeating until a city is selected
     }
