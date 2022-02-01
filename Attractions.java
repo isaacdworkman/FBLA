@@ -4,6 +4,7 @@ public class Attractions
   //Giant 2D array with strings, first row is the name of the attraction and the following rows are the attributes
   //First is the name, then the city its in, then the rating out of ten
   // I don't feel like doing data entry, these are the locations though
+   private String locationEntered ="";
   private String[][] AttractionOptions = {
     {"Henry Doorly Zoo and Aqaurium","Omaha"},
     {"Old Market", "Omaha"},
@@ -65,11 +66,21 @@ public class Attractions
   }
   Comparing Compare = new Comparing();
  
+   public void enteredLocation(String location)
+  {
+    locationEntered =location;
+  }
+  public String toString(String k)
+  {
+    return " "+k;
+  }
+  Comparing Compare = new Comparing();
+ 
   public void testCities()
   {
     for(int row =0; row<AttractionOptions.length; row++)
     {
-      if(Compare.RemoveByCity(AttractionOptions[row][1])==true)
+      if(Compare.RemoveByCity(AttractionOptions[row][1],locationEntered)==true)
         {
           System.out.println(AttractionOptions[row][0]);
         }
