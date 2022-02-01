@@ -6,7 +6,7 @@ public class Comparing
   
   public boolean Cities(String location)
   {
-    System.out.println(location);
+    System.out.println(location + " was selected);
     if(location.equals("Omaha")||location.equals("Lincoln")||location.equals("Fremont")||location.equals("Other"))
     {
     return true;
