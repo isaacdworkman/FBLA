@@ -67,15 +67,11 @@ public class Attractions
  
   public void testCities()
   {
-    for(String[] x: AttractionOptions)
+    for(int row =0; row<AttractionOptions.length; row++)
     {
-      for(String y: x)
-      {
-        if(Compare.RemoveByCity(y)==true)
+      if(Compare.RemoveByCity(AttractionOptions[row][1])==true)
         {
-          System.out.println(y);
+          System.out.println(AttractionOptions[row][0]);
         }
-      }
     }
-  }
 }
