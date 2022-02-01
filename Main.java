@@ -21,6 +21,7 @@ class Main {
     location = scan.nextLine();
     }while(Compare.Cities(location)==false);//Repeating until a city is selected
     }
+    Attract.enteredLocation(location);
     Attract.testCities();
 
     
