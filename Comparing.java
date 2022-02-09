@@ -35,8 +35,10 @@ public class Comparing
 
   public boolean price (String enteredPriceRange)
   {
-    
-    if(enteredPriceRange.equals("Free")||enteredPriceRange.equals("Under 25")||enteredPriceRange.equals("Above 50")||enteredPriceRange.equals("Any"))
+    // 0-5,6-10,10-20,20+
+    if(enteredPriceRange.equals("0-5")||enteredPriceRange.equals("6-10")||enteredPriceRange.equals("10-20")||
+    enteredPriceRange.equals("20+")||
+    enteredPriceRange.equals("Any"))
     {
       System.out.println(enteredPriceRange + " was selected");
     return true;
@@ -57,17 +59,17 @@ public class Comparing
      return false;
   }
 
-  public boolean Season (String enteredSeason)
+  public boolean InsideOut (String enteredSeason)
   {
     
-    if(enteredSeason.equals("Spring")||enteredSeason.equals("Summer")||enteredSeason.equals("Fall")||enteredSeason.equals("Winter")||enteredSeason.equals("Any"))
+    if(enteredSeason.equals("Inside")||enteredSeason.equals("Outside")||enteredSeason.equals("Any"))
     {
       System.out.println(enteredSeason + " was selected");
     return true;
     }
     return false;
   }
-  public boolean RemoveBySeason(String Season, String entry)
+  public boolean RemoveByInsideOrOutside(String Season, String entry)
   {
     if(entry.equals("Any"))
     {
