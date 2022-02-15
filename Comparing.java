@@ -83,4 +83,55 @@ public class Comparing
      return false;
   }
 
+  public boolean Handi (String choice)
+  {
+    if(choice.equals("No")||choice.equals("Yes")||choice.equals("Any"))
+    {
+      System.out.println(choice+" was selected");
+      return true;
+    }
+    return false;
+  }
+  
+  public boolean RemoveByHandicap(String hAccessible, String choice)
+  {
+    if(choice.equals("Any"))
+    {
+      return true;
+    }
+    if(choice.equals("No"))
+    {
+        return true;
+    
+    }
+    if(hAccessible.equals(choice))
+    {
+      return true;
+    }
+     return false;
+  }
+  
+  public boolean transportation (String enteredTransportation)
+  {
+    // 0-5,6-10,10-20,20+
+    if(enteredTransportation.equals("Yes")||enteredTransportation.equals("No")||enteredTransportation.equals("Any"))
+    {
+      System.out.println(enteredTransportation + " was selected");
+    return true;
+    }
+    return false;
+  }
+  public boolean RemoveByTransportation(String publicTransport, String entry)
+  {
+    if(entry.equals("No"))
+    {
+      return true;
+    }
+    if(publicTransport.equals(entry))
+    {
+      return true;
+    }
+     return false;
+  }
+
 }
