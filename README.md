@@ -1,4 +1,5 @@
-#FBLA
+
+
 This is Elkhorn FBLA's Coding and Programming Project.
 
 Our program is centered around a 2d array containing all of our locations and their attributes.
