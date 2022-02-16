@@ -14,4 +14,4 @@ You have been hired by your state or local area’s tourism bureau to develop a 
 https://replit.com/join/ibahlrnlsq-uehlingm 
 That is the link to the code on a free website compilier.
 https://github.com/isaacdworkman/FBLA
-While this is a link to a github where all the code is written out incase south 
+While this is a link to a github where all the code is written out incase something goes south
