@@ -1,137 +1,75 @@
 public class Comparing
 {
-  
-  
-  public boolean Cities(String location)
+  //each general method validifies a proper user selectoin and then returns true or false based on that fact
+  //each removeBy method compares the users entry to an attraction's attribute in the 2d array of the Attractions class
+
+  //test 1
+  public boolean testViable(String entered, String option1, String option2, String option3, String option4)
   {
-    
-    if(location.equals("Omaha")||location.equals("Lincoln")||location.equals("Fremont")||location.equals("Other")||location.equals("Any"))
+    { 
+    if(entered.equals(option1)||entered.equals(option2)|entered.equals(option3)||entered.equals(option4)||entered.equals("Any"))
     {
-      System.out.println(location + " was selected");
+      System.out.println(entered + " was selected");
+    return true;
+    }
+    return false;
+  }
+  }
+  public boolean testViableShort(String entered, String option1, String option2)
+  {
+    if(entered.equals(option1)||entered.equals(option2)|entered.equals("Any"))
+    {
+      System.out.println(entered + " was selected");
     return true;
     }
     return false;
   }
 
-  public boolean RemoveByCity(String location, String entry)
+  public boolean Removal(String trait, String desired)
   {
-    if(entry.equals("Any"))
+    if(desired.equals("Any"))
     {
       return true;
     }
-    if(entry.equals("Other"))
+    if(desired.equals(trait))
     {
-      if(!location.equals("Omaha")&& !location.equals("Lincoln")&&!location.equals("Fremont"))
+      return true;
+    }
+     return false;
+    }
+  public boolean RemoveLoseEnds(String trait, String desired)
+  {
+    if(desired.equals("Other"))
+    {
+      if(!trait.equals("Omaha")&& !trait.equals("Lincoln")&&!trait.equals("Fremont"))
       {
         return true;
       }
     }
-    if(location.equals(entry))
-    {
-      return true;
-    }
-     return false;
-  }
-
-  public boolean price (String enteredPriceRange)
-  {
-    // 0-5,6-10,10-20,20+
-    if(enteredPriceRange.equals("0-5")||enteredPriceRange.equals("6-10")||enteredPriceRange.equals("10-20")||
-    enteredPriceRange.equals("20+")||
-    enteredPriceRange.equals("Any"))
-    {
-      System.out.println(enteredPriceRange + " was selected");
-    return true;
-    }
-    return false;
-  }
-  public boolean RemoveByPrice(String priceRange, String entry)
-  {
-    if(entry.equals("Any"))
+    if(desired.equals("Any"))
     {
         return true;
-    
     }
-    if(priceRange.equals(entry))
+    if(desired.equals("1"))
+    {
+      if(trait.equals("4.4")||trait.equals("4.3")||trait.equals("4"))
+      return true;
+    }
+    if(desired.equals("2"))
+    {
+      if(trait.equals("4.5")||trait.equals("4.6")||trait.equals("4.7"))
+      return true;
+    }
+    if(desired.equals("3"))
+    {
+      if(trait.equals("4.8")||trait.equals("4.9")||trait.equals("5"))
+      return true;
+    }
+    if(desired.equals("4"))
     {
       return true;
     }
      return false;
   }
-
-  public boolean InsideOut (String enteredSeason)
-  {
-    
-    if(enteredSeason.equals("Inside")||enteredSeason.equals("Outside")||enteredSeason.equals("Any"))
-    {
-      System.out.println(enteredSeason + " was selected");
-    return true;
-    }
-    return false;
-  }
-  public boolean RemoveByInsideOrOutside(String Season, String entry)
-  {
-    if(entry.equals("Any"))
-    {
-        return true;
-    
-    }
-    if(Season.equals(entry))
-    {
-      return true;
-    }
-     return false;
-  }
-
-  public boolean Handi (String choice)
-  {
-    if(choice.equals("No")||choice.equals("Yes")||choice.equals("Any"))
-    {
-      System.out.println(choice+" was selected");
-      return true;
-    }
-    return false;
-  }
-  
-  public boolean RemoveByHandicap(String hAccessible, String choice)
-  {
-    if(choice.equals("Any"))
-    {
-      return true;
-    }
-    if(choice.equals("No"))
-    {
-        return true;
-    
-    }
-    if(hAccessible.equals(choice))
-    {
-      return true;
-    }
-     return false;
-  }
-  
-  public boolean transportation (String enteredTransportation)
-  {
-    // 0-5,6-10,10-20,20+
-    if(enteredTransportation.equals("Yes")||enteredTransportation.equals("No")||enteredTransportation.equals("Any"))
-    {
-      System.out.println(enteredTransportation + " was selected");
-    return true;
-    }
-    return false;
-  }
-  public boolean RemoveByTransportation(String publicTransport, String entry)
-  {
-    if(entry.equals("No"))
-    {
-      return true;
-    }
-    if(publicTransport.equals(entry))
-    {
-      return true;
-    }
-     return false;
-  }
-
 }
+ 
