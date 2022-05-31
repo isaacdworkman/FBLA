@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class HelpPage
+  {
+    Scanner scan = new Scanner(System.in);
+    private int questionNumber;
+    private String userQuestion;
+    public void helpPage()
+    {
+      System.out.println("Sorry that you are experiencing problems with our program.\nTo help out we have some basic questions to help you and your struggles running our travel website.Please just type in which question you want help answering.");
+      System.out.println("#1-Why won't it recongnize my answers?\n#2-What is the point of this website I found?\n#3- Who created this page?\n#4-How do I exit this page?\n#5-Are you google?\n#6-What is the programmers favorite location?\n#7-How difficult was it to create this project?\n#8-What is the type of locations are on the magical list?");
+      questionNumber = scan.nextInt();
+      if(questionNumber == 1)
+      {
+        System.out.println("Our apologies you are having a hard time having your requests understanded. Please type exactly what the options say. For example when looking at the city one of the options is 'Omaha' so please type in a captial O followed by m a h a. The little punctuation is used for showing which words are the options.");
+      }
+      if(questionNumber == 2)
+      {
+        System.out.println("Well welcome to our travel website. We were hired by Nebraska to develope a program that suggests attractions to potential visitors.");
+      }
+      if(questionNumber == 3)
+      {
+        System.out.println("This website was created by Matt Uehling with help from Ben Kubicek and Isaac Workmen.");
+      }
+      if(questionNumber == 4)
+      {
+        System.out.println("It pains us that you would want to leave this page, but simply pressing the 'x' button on the tab or the 'x' in the top right corner.");
+      }
+      if(questionNumber == 5)
+      {
+        System.out.println("Maybe one day we might get bought by Google but we are not Google. Google is a search engine we are a free tourist attraction website.");
+      }
+      if(questionNumber == 6)
+      {
+        System.out.println("Matts personal favorite is obviously the Lester F. Larsen Tractor Test and Power Museum, Bens favorite is the carhenge, Isaac prefers relaxing at the scenic driving tour of the sandhills.");
+      }
+      if(questionNumber == 7)
+      {
+        System.out.println("The project itself isn't too difficult, just took a lot of time to type everything out and then fix it multiple times.");
+      }
+      if(questionNumber == 8)
+      {
+        System.out.println("There are 53 locations currently on the list, but currently restraunts are not on our list it consists of tourist attractions including a water park a few zoos, some nature locations and a lot of museums.");
+      }
+      System.out.println("If you have anymore questions please type 'HELP' again");
+    }
+  }
