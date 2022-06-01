@@ -104,17 +104,17 @@ class Main {//Main class
     attributeArrayLocation++;// Adds one to the attributeArrayLocation variable so the next entered attribute doesn't accidentally replace the old attribute in the attributes array in the Attraction class. 
    
  //handicap accessible
-    System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
+    System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
     userEntered = scan.nextLine();///stores the entered location from the console into the userEntered variable and replaces the old information.
     if(userEntered.equals("HELP"))//If the user needs help it sends them to the help page
        {
          do{
         helpPg.helpPage();//Calls the help page method in the HelpPage class.
-        System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
+        System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
     userEntered = scan.nextLine();//stores the entered location from the console into the userEntered variable.
            }while(userEntered.equals("HELP"));//Continue to run if the user continues to have questions
        }
-    if(Compare.testViableShort(userEntered, "Yes", "No")==false)//calls the testViableShort method in the compare class. Compares the information entered by the user in the variable 'userEntered' to the acceptable attributes. If the entered doesn't equal one of the attributes it runs a do-while method until a handicap accessiblity attribute is accepted.
+    if(Compare.testViableShort(userEntered, "Yes", "No")==false)//calls the testViableShort method in the compare class. Compares the information entered by the user in the variable 'userEntered' to the acceptable attributes. If the entered doesn't equal one of the attributes it runs a do-while method until a handicap accessibility attribute is accepted.
     {
       do{//Do while loop, so until the while statement equals true it will keep running the same code inside the loop, Testing if testViable is true.
         System.out.println("Sorry your selection was not recongnized please try again");//Prints out to alert the user that the entered infromation doesn't equal one of the options.
@@ -124,7 +124,7 @@ class Main {//Main class
        {
          do{
         helpPg.helpPage();//Calls the help page method in the HelpPage class.
-        System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints out the possible attributes again, in this case for the handicap attribute.
+        System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints out the possible attributes again, in this case for the handicap attribute.
         userEntered = scan.nextLine();//stores the entered location from the console into the userEntered variable
            }while(userEntered.equals("HELP"));//Continue to run if the user continues to have questions
       }
@@ -401,19 +401,19 @@ if(Compare.testViableShort(userEntered, "Yes", "No")==false)//If the user has en
     }
     Attract.enteredData(3,userEntered);//Calls the enteredData method in the Attraction class and records the Users preference for the price range. 
       }
-      if(userEntered.equals("Handicap accessiblity"))//If the user wants to change the handicap accessiblity.
+      if(userEntered.equals("Handicap accessibility"))//If the user wants to change the handicap accessibility.
       {
-        System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
+        System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
     userEntered = scan.nextLine();///stores the entered location from the console into the userEntered variable and replaces the old information.
         if(userEntered.equals("HELP"))//If the user needs help it sends them to the help page
        {
          do{
         helpPg.helpPage();//Calls the help page method in the HelpPage class.
-        System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
+        System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
     userEntered = scan.nextLine();//stores the entered location from the console into the userEntered variable.
            }while(userEntered.equals("HELP"));//Continue to run if the user continues to have questions
        }
-    if(Compare.testViableShort(userEntered, "Yes", "No")==false)//calls the testViableShort method in the compare class. Compares the information entered by the user in the variable 'userEntered' to the acceptable attributes. If the entered doesn't equal one of the attributes it runs a do-while method until a handicap accessiblity attribute is accepted.
+    if(Compare.testViableShort(userEntered, "Yes", "No")==false)//calls the testViableShort method in the compare class. Compares the information entered by the user in the variable 'userEntered' to the acceptable attributes. If the entered doesn't equal one of the attributes it runs a do-while method until a handicap accessibility attribute is accepted.
     {
       do{//Do while loop, so until the while statement equals true it will keep running the same code inside the loop, Testing if testViable is true.
         System.out.println("Sorry your selection was not recongnized please try again");//Prints out to alert the user that the entered infromation doesn't equal one of the options.
@@ -423,7 +423,7 @@ if(Compare.testViableShort(userEntered, "Yes", "No")==false)//If the user has en
        {
          do{
         helpPg.helpPage();//Calls the help page method in the HelpPage class.
-        System.out.println("Do you require handicap accessiblity, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
+        System.out.println("Do you require handicap accessibility, either: 'Yes' or 'No'");//Prints off the options for the handicap accessibility attribute.
     userEntered = scan.nextLine();//stores the entered location from the console into the userEntered variable.
            }while(userEntered.equals("HELP"));//Continue to run if the user continues to have questions
        }
