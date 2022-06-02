@@ -77,7 +77,7 @@ public class Attractions
     else
     {System.out.println("This location is not handicap accessible");}//If not handicap accessible then it says so
    if(AttractionOptions[row][5].equals("Yes"))//If public transportation is an option for the location
-    {System.out.println("Public transportation is an option");}//Statement returned if the location offers public transportation.
+    {System.out.println("Public transportation is optional");}//Statement returned if the location offers public transportation.
     else
     {System.out.println("Public transportation is not an option");} //Statement returns if the location can not be reached by public transportation.
     if(AttractionOptions[row][6].equals("Yes"))//If physical activity occurs then it returns a statement saying so
@@ -146,28 +146,33 @@ public class Attractions
             count++;
           }
         }
-      if(count ==comparison)//If the count equals the goal number of attributes then it runs the code inside the if statement. 
+      if(count == comparison)//If the count equals the goal number of attributes then it runs the code inside the if statement. 
       {
-        
-        if(comparison==8 && returned == false)//If no location has already been returned and its trying to be a perfect match to the users desired attributes.
+        if(count == 8 && returned == false)
         {
-        System.out.println("These are the locations that fit your desired attributes");//Prints out alerting the user these are the best possible location for their desired traits.
+          System.out.println("These are the locations that fit your desired attributes");//Prints out alerting the user these are the best possible location for their desired traits.
           returned = true;//tells the private instance variable something has been returned.
         }
-        System.out.println(AttractionOptions[row][0]);//Prints out the attractions that match the attributes.
-        returned = true;//alerts the instance variable that something has been returned to the user.
+        System.out.println(AttractionOptions[row][0]);
         if(comparison<8)//If the program has to run the ultimate print statement more than once its prints out the attributes so the user can decided whether the different in attributes is still worth going too.
         {
           printAttractionAttributes(row);//Calls the printAttractionAttribute and prints off the information for that particular row.
         }
       }
       count = 0;//Resets the count for the next location.
+      if(returned == false)//If nothing has been returned meaning none of the attractions fit the desired attributes,
+      {
+        if(returned == false && comparison == 8)
+        {
+          System.out.println("Sorry there were none that had the same attributes, but the next closest is location for your desired attributes is: ");//Alerts the user their desired attributes aren't matching with any of the locations.
+          returned = true;
+        }
+        UltimatePrint(comparison-1);//Calls the Ultimate print statement again but with one less point so only 7 then 6 then 5 of the attributes have to be the same.
+      }
     }
-     if(returned == false)//If nothing has been returned meaning none of the attractions fit the desired attributes,
-    {
-      returned = true;//alerts the instance variable that something has been returned to the user.
-      System.out.println("Sorry there were none that had the same attributes, but the next closest is location for your desired attributes is: ");//Alerts the user their desired attributes aren't matching with any of the locations.
-      UltimatePrint(comparison-1);//Calls the Ultimate print statement again but with one less point so only 7 then 6 then 5 of the attributes have to be the same.
-    }
+  }
+  public void reset()//Resets all the information for the next run through
+  {
+    returned = false;//informs the program to regard nothing has been returned yet.
   }
 }
