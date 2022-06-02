@@ -40,6 +40,6 @@ public class HelpPage//class of HelpPage.
       {
         System.out.println("There are 53 locations currently on the list, but currently restraunts are not on our list it consists of tourist attractions including a water park a few zoos, some nature locations and a lot of museums.");
       }
-      System.out.println("If you have anymore questions please type 'HELP' again");
+      System.out.println("If you have anymore questions please type 'HELP' again\n");
     }
   }
